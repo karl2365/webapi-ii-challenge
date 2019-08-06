@@ -1,11 +1,13 @@
 // an api to manage channels
 const express = require('express');
 
-const channelsRouter = require('./posts/postsRouter.js');
+const postsRouter = require('./posts/postsRouter.js');
 
 const server = express();
 
 server.use(express.json());
+server.use('/api/posts', postsRouter);
+
 
 
 
